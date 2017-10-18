@@ -8,6 +8,12 @@
   pointer-events: none;
   color: #fff;
 
+  &__primaryheader {
+    position: relative;
+    min-width: 55px;
+    text-align: center;
+  }
+
   &__naviconwrapper {
     height: 50px;
     width: 50px;
@@ -16,6 +22,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    margin-top: -45px;
     transition: width .5s ease-in;
 
 
@@ -29,8 +36,8 @@
  }
 
  &__navicon {
-  position: absolute;
-  top: -30px;
+  //position: absolute;
+  //top: -30px;
   animation-duration: 2s;
   transition: top .5s ease-in;
 
@@ -53,6 +60,7 @@
   font-size: 14px;
   transition: font-size .5s ease-in;
   animation-duration: .5s;
+
 
   @media screen and (min-width: 700px) {
    font-size: 18px;
@@ -107,38 +115,38 @@
     animation-delay: .2s;
   }
 
-    &.test-bg {
+  &.test-bg {
    // background: linear-gradient(to bottom, #22bc4f 0%,#0b3815 100%);
-  }
-
-
-
-  h2 {
-    display: block;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fff;
-    margin-top: 87px;
-  }
-
-  li{
-    text-align: center;
-    padding: 8px;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
-  &__close {
-   height: 80px;
-   width: 80px;
-   color: #fff;
-   /* float: right; */
-   right: 0;
-   position: absolute;
-   padding: 20px;
  }
+
+
+
+ h2 {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 87px;
+}
+
+li{
+  text-align: center;
+  padding: 8px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+&__close {
+ height: 80px;
+ width: 80px;
+ color: #fff;
+ /* float: right; */
+ right: 0;
+ position: absolute;
+ padding: 20px;
+}
 }
