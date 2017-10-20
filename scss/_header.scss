@@ -6,7 +6,7 @@
 
     &.is-active {
     height: 560px;
-    height: 100vh;
+    //height: 100vh;
     }
 
   &__menu {
@@ -64,6 +64,7 @@
     background: white;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
   }
 
   &__footer-item {

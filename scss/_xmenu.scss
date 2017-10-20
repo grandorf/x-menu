@@ -25,7 +25,7 @@
 
 	&__triangle {
 		fill-opacity: .8;
-		transition: transform .5s ease-in;
+		transition: transform .5s ease-in, fill-opacity .2s ease-in;
 		transform: scale(1);
 		animation-duration: .5s;
 
@@ -34,7 +34,11 @@
 			fill-opacity: 1;
 			//fill: red;
 			stroke: #0b430f;
-            stroke-width: 0.2px;
+      stroke-width: 0.2px;
+		}
+
+		&.add-delay {
+transition-delay: .1s;
 		}
 
 		&:hover {
