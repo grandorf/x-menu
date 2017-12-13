@@ -33,9 +33,18 @@ li {
 	padding: 0;
 }
 
-main img {
-	width: 100%;
+.main img {
+//	width: 100%;
 }
 
+.main {
+	position: absolute;
+	z-index: 10;
+}
+
+@import 'parallax';
 @import 'animate';
-@import 'header';
+//@import 'header';
+@import 'poc';
+
+

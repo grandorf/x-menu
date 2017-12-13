@@ -11,7 +11,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('js', function() {
-  const sourcefile = './js/main.js';
+  const sourcefile = './js/poc.js';
   const fileName = path.basename(sourcefile);
   browserify({
     entries: [sourcefile],
