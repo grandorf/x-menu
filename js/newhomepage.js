@@ -66,3 +66,13 @@ $('body').scroll(function() {
      $('.shortcuts').removeClass('is-visible');   
    }
 });
+
+$('body').scroll(function() {
+   if ($('.fader').isOnScreen() == true) {
+     $('.fadeshit').addClass('is-visible');   
+   }
+    else { 
+     $('.fadeshit').removeClass('is-visible');   
+   }
+});
+

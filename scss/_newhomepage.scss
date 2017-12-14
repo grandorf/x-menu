@@ -10,7 +10,7 @@
   width: 100%;
   left: 0;
   padding: 16px;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 
 .bump {
@@ -31,6 +31,13 @@
     animation-delay: 1s;
 }
 
+.fader {
+position: absolute;
+bottom: 300px;
+height: 1px;
+width: 1px;
+}
+
 .margin {
   margin-top: 400px;
 }
@@ -42,9 +49,19 @@
   transition: opacity 2s ease-in;
   transition-delay: .3s;
   padding-top: 100px;
+      margin-left: 61px;
 
  &.is-visible {
   opacity: 1;
+}
+}
+
+.fadeshit {
+    opacity: 1;
+  transition: opacity 1s ease-in;
+
+   &.is-visible {
+  opacity: 0;
 }
 }
 
@@ -98,9 +115,9 @@
 }
 
 .iphoneheader {
-  @include parallax(.2);
+  @include parallax(.3);
   top: 9px;
-  left: 170px;
+  left: 195px;
   width: 49%;
   opacity: 0;
   transition: opacity 1s ease-in;
@@ -137,7 +154,7 @@
 .iphonefront {
   @include parallax(.2);
   top: -72px;
-  left: 657px;
+  left: 759px;
   width: 36%;
 }
 
