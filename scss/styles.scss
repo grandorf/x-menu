@@ -1,16 +1,12 @@
-﻿* {
+﻿@import 'animate';
+@import 'parallax';
+
+* {
 	box-sizing: border-box;
 }
 
 html {
 	font-size: 16px;
-
-	&.header-is-active  {
-		overflow: hidden;
-		height: 100%;
-		max-height: 100%;
-		position: fixed;
-	}
 }
 
 body {
@@ -33,18 +29,18 @@ li {
 	padding: 0;
 }
 
-.main img {
-//	width: 100%;
+.new {
+  background: #fff;
+  transition: background .5s ease-in;
 }
 
-.main {
-	position: absolute;
-	z-index: 10;
+.fakecontent {
+  width: 100%;
+    animation-delay: .5s;
 }
 
-@import 'parallax';
-@import 'animate';
-//@import 'header';
-@import 'poc';
+//@import 'poc';
+@import 'newhomepage';
+
 
 
