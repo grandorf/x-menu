@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="dist/bg.css">
+	<title>Delta</title>
+  <style>
+  body {
+        margin: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+  }
+  .center {
+    text-align: center;
+    margin: auto;
+  }
+  .ani1 {
+    animation-duration: 2.2s;
+    animation-fill-mode: both;
+    animation-name: animation1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:  ease-in-out;
+  }
+
+  @keyframes animation1 {
+   from {
+    fill: #3CB84D;
+  }
+  to {
+    fill: #2C795B;
+  }
+}
+  .ani2 {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-name: animation2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:  ease-in-out;
+    animation-delay: 1.1s;
+  }
+
+  @keyframes animation2 {
+   from {
+    fill: #3CB84D;
+  }
+  to {
+    fill: #2C795B;
+  }
+}
+  .ani3 {
+    animation-duration: 1.4s;
+    animation-fill-mode: both;
+    animation-name: animation3;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: 1.9s;
+  }
+
+  @keyframes animation3 {
+   from {
+    fill: #3CB84D;
+  }
+  to {
+    fill: #2C795B;
+  }
+}
+
+.all {
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-name: scaleinout;
+    animation-iteration-count: infinite;
+    //animation-direction: alternate;
+    animation-timing-function: linear;
+    transform-origin: center;
+    padding-top: 100px;
+}
+
+@keyframes scaleinout {
+  from {
+    transform: rotate(0);
+  }
+  to {
+transform: rotate(360deg);
+  }
+}
+</style>
+
+<style>@charset "UTF-8";
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
+}
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.headShake {
+  animation-timing-function: ease-in-out;
+  animation-name: headShake;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="center">
+  <svg xmlns="http://www.w3.org/2000/svg" width="767" height="711" viewBox="0 0 767 711">
+    <g fill="none" class="animated zoomIn">
+      <polygon class="animated ani1" fill="#3CB84D" points="306.3 .8 606 519.9 230.7 519.9 177.3 612.5 766.3 612.5 762.2 607.4"/>
+      <polygon class="animated ani2" fill="#009960" points=".9 708 301.1 188.9 488.8 513.9 595.7 513.9 301.1 3.8"/>
+      <polygon class="animated ani3" fill="#2C795B" points="6 711 4.1 711 766.3 618.4 166.9 618.4 354.6 293.4 301.1 200.8"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

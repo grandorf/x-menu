@@ -1,5 +1,4 @@
 ﻿@import 'animate';
-@import 'parallax';
 
 * {
 	box-sizing: border-box;
@@ -39,8 +38,38 @@ li {
     animation-delay: .5s;
 }
 
-//@import 'poc';
-@import 'newhomepage';
+.poc-bg {
+  background: red;
+}
 
+.poc {
+  background: #fff;
+  transition: background 1s ease-in-out;
+}
+
+.poc-text {
+ transition: all 1s ease-in;
+ margin: 400px 100px;
+ color: #000;
+ opacity: 1;
+}
+
+.is-visible {
+ background: #191919;
+
+ .poc-text {
+  //color: #fff;
+  opacity: 0;
+}
+}
+
+.is-visible2 {
+ background: #14503a;
+
+ .poc-text {
+  opacity: 0;
+}
+
+}
 
 

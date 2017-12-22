@@ -19,16 +19,16 @@ $.fn.isOnScreen = function(){
 
 };
 
-$(window).scroll(function() {
-   if ($('#pocImage').isOnScreen() == true) {
-     $('.main').addClass('is-visible');   
+$('body').scroll(function() {
+   if ($('#dark').isOnScreen() == true) {
+     $('.new').addClass('dark');   
    }
     else { 
      $('.main').removeClass('is-visible');   
    }
 });
 
-$(window).scroll(function() {
+$('body').scroll(function() {
    if ($('#pocImage2').isOnScreen() == true) {
      $('.main').addClass('is-visible2');   
    }

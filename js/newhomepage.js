@@ -76,3 +76,8 @@ $('body').scroll(function() {
    }
 });
 
+
+$('.menu').click(function() {
+  alert('Dude! This is only a prototype for the homepage effects')
+});
+

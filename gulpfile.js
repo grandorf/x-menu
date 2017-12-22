@@ -5,12 +5,12 @@ const path = require('path');
 const source = require('vinyl-source-stream');
 
 gulp.task('scss', function() {
-  gulp.src('./scss/styles.scss')
+  gulp.src('./scss/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('js', function() {
+gulp.task('homepage', function() {
   const sourcefile = './js/newhomepage.js';
   const fileName = path.basename(sourcefile);
   browserify({
@@ -21,10 +21,21 @@ gulp.task('js', function() {
   .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['scss', 'js', 'watch'], function() {}); 
+gulp.task('poc', function() {
+  const sourcefile = './js/poc.js';
+  const fileName = path.basename(sourcefile);
+  browserify({
+    entries: [sourcefile],
+  })
+  .bundle()
+  .pipe(source(fileName))
+  .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('default', ['scss', 'homepage', 'poc', 'watch'], function() {}); 
 
 gulp.task('watch', function () {
     gulp.watch('scss/**/*.scss', ['scss']);
-    gulp.watch('js/**/*.js', ['js']);
+    gulp.watch('js/**/*.js', ['poc', 'homepage']);
     //gulp.watch('dist/**/*', reloadPage);
 });
